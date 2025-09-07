@@ -191,6 +191,55 @@
         "Lock your home and secure it before leaving.",
         "Go to designated emergency shelters or stay with family/friends outside the danger zone."
       ]
+    },
+    "cyclone": {
+      "synonyms": ["cyclone", "tropical cyclone", "storm", "severe storm", "cyclonic storm"],
+      "category": "Natural Disaster",
+      "summary": "Take shelter immediately and prepare for strong winds and heavy rain.",
+      "critical": true,
+      "instructions": [
+        "Listen to weather warnings from IMD (India Meteorological Department) and local authorities.",
+        "If evacuation is ordered, leave immediately and follow designated routes.",
+        "If staying, go to the strongest part of your house away from windows.",
+        "Secure all loose objects outside that could become projectiles.",
+        "Fill containers with clean drinking water and store emergency food supplies.",
+        "Turn off gas and electricity if instructed by authorities.",
+        "Stay indoors during the cyclone and do not venture outside.",
+        "After the cyclone passes, avoid downed power lines and flooded areas.",
+        "Contact family members to inform them of your safety status."
+      ]
+    },
+    "monsoon": {
+      "synonyms": ["monsoon", "heavy rain", "rainy season", "flooding", "waterlogging"],
+      "category": "Natural Disaster",
+      "summary": "Prepare for heavy rainfall and potential flooding during monsoon season.",
+      "critical": false,
+      "instructions": [
+        "Check weather forecasts regularly during monsoon season.",
+        "Keep emergency supplies including food, water, and medications ready.",
+        "Avoid walking or driving through flooded areas and waterlogged streets.",
+        "Keep important documents in waterproof containers.",
+        "Clear drains and gutters around your property to prevent waterlogging.",
+        "Have alternative lighting sources ready in case of power outages.",
+        "Stay informed about local flood warnings and evacuation orders.",
+        "Keep emergency contact numbers handy including local authorities."
+      ]
+    },
+    "heat stroke": {
+      "synonyms": ["heat stroke", "heat exhaustion", "sunstroke", "heat illness", "overheating"],
+      "category": "Medical Emergency",
+      "summary": "Immediate cooling and medical attention required for heat-related illness.",
+      "critical": true,
+      "instructions": [
+        "Move the person to a cool, shaded area immediately.",
+        "Remove excess clothing and apply cool, wet cloths to the skin.",
+        "Fan the person and apply ice packs to armpits, neck, and groin areas.",
+        "Give cool water to drink if the person is conscious and able to swallow.",
+        "Do not give alcohol or caffeinated beverages.",
+        "Call emergency services at 102 for ambulance immediately.",
+        "Monitor the person's breathing and pulse until help arrives.",
+        "If unconscious, place in recovery position and monitor vital signs."
+      ]
     }
   }
 }

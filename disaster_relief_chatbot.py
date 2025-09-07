@@ -13,26 +13,45 @@ def load_disaster_data(filename="disaster_data.json"):
     with open(filename, 'r') as f:
         return json.load(f)
 
-def speak(text):
-    """Convert text to speech and play it."""
+def speak(text, slow=False, lang='en'):
+    """Convert text to speech and play it with enhanced audio quality."""
     try:
-        tts = gTTS(text=text, lang='en')
+        # Create TTS with better settings
+        tts = gTTS(text=text, lang=lang, slow=slow)
         filename = "response.mp3"
         tts.save(filename)
         
-        # Initialize pygame mixer
+        # Initialize pygame mixer with better audio settings
+        pygame.mixer.pre_init(frequency=22050, size=-16, channels=2, buffer=512)
         pygame.mixer.init()
+        
+        # Load and play the audio
         pygame.mixer.music.load(filename)
+        pygame.mixer.music.set_volume(0.8)  # Set volume to 80%
         pygame.mixer.music.play()
         
         # Wait for the audio to finish playing
         while pygame.mixer.music.get_busy():
             pygame.time.wait(100)
         
+        # Clean up
+        pygame.mixer.music.unload()
         os.remove(filename)
     except Exception as e:
         print(f"TTS Error: {e}")
         print(text)
+
+def speak_emergency_numbers():
+    """Speak emergency numbers clearly for Indian users."""
+    emergency_info = """
+    Emergency numbers for India:
+    Police: 100
+    Fire: 101  
+    Ambulance: 102
+    Disaster Response: 108
+    """
+    print(emergency_info)
+    speak(emergency_info, slow=True)
 
 def listen_to_user():
     """Capture audio from mic and convert to text."""
@@ -76,9 +95,9 @@ def give_instructions(keyword, data):
 
     # Critical check
     if entry.get("critical", False):
-        warning = f"URGENT: {keyword} is a critical emergency. Call emergency services immediately at 911. Here are immediate safety steps:"
+        warning = f"URGENT: {keyword} is a critical emergency. Call emergency services immediately at 100 for police, 101 for fire, 102 for ambulance, or 108 for disaster response. Here are immediate safety steps:"
         print(warning)
-        speak(warning)
+        speak(warning, slow=True)  # Use slower speech for critical messages
     else:
         intro_warning = f"Disaster relief guidance for {keyword}. Follow these steps carefully:"
         print(intro_warning)
@@ -110,7 +129,7 @@ def give_instructions(keyword, data):
                         speak("Stopping disaster relief instructions. Stay safe and follow emergency protocols.")
                         return
 
-    final_msg = f"Those were the disaster relief steps for {keyword}. Remember to call emergency services if the situation becomes life-threatening."
+    final_msg = f"Those were the disaster relief steps for {keyword}. Remember to call emergency services at 100, 101, 102, or 108 if the situation becomes life-threatening."
     print(final_msg)
     speak(final_msg)
 
@@ -120,7 +139,7 @@ if __name__ == "__main__":
     disclaimer = """
     Welcome to the Disaster Relief Emergency Assistant.
     I can help you with guidance for various natural disasters and emergency situations.
-    For life-threatening emergencies, always call 911 immediately.
+    For life-threatening emergencies, call 100 for police, 101 for fire, 102 for ambulance, or 108 for disaster response.
     """
     print(disclaimer)
     speak(disclaimer)
@@ -131,8 +150,11 @@ if __name__ == "__main__":
             if any(exit_word in user_command for exit_word in ["exit", "quit", "goodbye", "bye"]):
                 speak("Goodbye! Stay safe and be prepared for emergencies.")
                 break
-            keyword = process_command(user_command, disaster_data)
-            if keyword:
-                give_instructions(keyword, disaster_data)
+            elif any(emergency_word in user_command for emergency_word in ["emergency numbers", "emergency contacts", "help numbers", "100", "101", "102", "108"]):
+                speak_emergency_numbers()
             else:
-                speak("I can help with disaster relief situations like earthquakes, floods, hurricanes, wildfires, tornadoes, and other emergencies. Please describe the disaster or emergency clearly.")
+                keyword = process_command(user_command, disaster_data)
+                if keyword:
+                    give_instructions(keyword, disaster_data)
+                else:
+                    speak("I can help with disaster relief situations like earthquakes, floods, hurricanes, wildfires, tornadoes, and other emergencies. Say 'emergency numbers' for help contacts. Please describe the disaster or emergency clearly.")
