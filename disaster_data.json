@@ -1,0 +1,196 @@
+{
+  "scenarios": {
+    "earthquake": {
+      "synonyms": ["quake", "tremor", "aftershock", "seismic", "ground shaking"],
+      "category": "Natural Disaster",
+      "summary": "Drop, Cover, and Hold On during earthquakes.",
+      "critical": true,
+      "instructions": [
+        "If indoors, immediately drop to your hands and knees to prevent being knocked down.",
+        "Take cover under a sturdy table or desk and hold on with one hand.",
+        "Stay away from windows, mirrors, and heavy objects that can fall.",
+        "If outdoors, move to an open area away from buildings, trees, and power lines.",
+        "If in a vehicle, pull over to a clear location and stop. Stay inside with seatbelt fastened.",
+        "After shaking stops, evacuate the building carefully and watch for aftershocks.",
+        "Check for injuries and call emergency services if needed.",
+        "Be prepared for aftershocks which can be as strong as the initial earthquake."
+      ]
+    },
+    "flood": {
+      "synonyms": ["flooding", "high water", "flash flood", "rising water", "inundation"],
+      "category": "Natural Disaster",
+      "summary": "Move to higher ground immediately and avoid flood waters.",
+      "critical": true,
+      "instructions": [
+        "Never walk or drive through flood waters. Just 6 inches of moving water can knock you down.",
+        "Move to higher ground immediately if you see rising water.",
+        "Listen to emergency broadcasts and follow evacuation orders from local authorities.",
+        "Disconnect electrical appliances and turn off utilities if safe to do so.",
+        "If trapped in a building, go to the highest floor and call for help.",
+        "Avoid contact with flood water as it may be contaminated.",
+        "Do not return to flooded areas until authorities declare it safe.",
+        "Keep emergency supplies including food, water, and medications ready."
+      ]
+    },
+    "hurricane": {
+      "synonyms": ["cyclone", "typhoon", "tropical storm", "storm surge", "gale"],
+      "category": "Natural Disaster",
+      "summary": "Evacuate if ordered and take shelter in a sturdy building.",
+      "critical": true,
+      "instructions": [
+        "Listen to local weather reports and emergency broadcasts for evacuation orders.",
+        "If evacuation is ordered, leave immediately and follow designated evacuation routes.",
+        "If staying, go to an interior room on the lowest floor away from windows.",
+        "Board up windows with plywood or use storm shutters.",
+        "Secure outdoor objects that could become projectiles in high winds.",
+        "Fill bathtubs and containers with water for drinking and sanitation.",
+        "Have a battery-powered radio and flashlights ready.",
+        "Stay indoors during the storm and do not go outside until authorities say it's safe."
+      ]
+    },
+    "wildfire": {
+      "synonyms": ["forest fire", "bushfire", "wildland fire", "blaze", "conflagration"],
+      "category": "Natural Disaster",
+      "summary": "Evacuate immediately and protect yourself from smoke.",
+      "critical": true,
+      "instructions": [
+        "Evacuate immediately if ordered by authorities or if you feel unsafe.",
+        "Close all windows and doors to prevent smoke from entering.",
+        "Turn off air conditioning and fans to avoid drawing in outside air.",
+        "Wet down your roof and surrounding vegetation if time permits.",
+        "Wear protective clothing and a mask to reduce smoke inhalation.",
+        "Follow evacuation routes and avoid areas with heavy smoke.",
+        "Do not return home until authorities declare it safe.",
+        "Have an emergency kit ready with important documents and medications."
+      ]
+    },
+    "tornado": {
+      "synonyms": ["twister", "funnel cloud", "cyclone", "whirlwind"],
+      "category": "Natural Disaster",
+      "summary": "Take immediate shelter in the lowest, most interior room.",
+      "critical": true,
+      "instructions": [
+        "Go to the lowest floor of a sturdy building immediately.",
+        "Take shelter in a small, windowless interior room like a closet or bathroom.",
+        "Get under a sturdy piece of furniture and cover your head and neck.",
+        "If in a mobile home, evacuate to a nearby sturdy building or storm shelter.",
+        "If caught outside, lie flat in a low-lying area and cover your head.",
+        "Stay away from windows, doors, and outside walls.",
+        "Listen to weather radio or local news for tornado warnings.",
+        "After the tornado passes, check for injuries and call for help if needed."
+      ]
+    },
+    "tsunami": {
+      "synonyms": ["tidal wave", "seismic sea wave", "ocean wave"],
+      "category": "Natural Disaster",
+      "summary": "Move to higher ground immediately when tsunami warning is issued.",
+      "critical": true,
+      "instructions": [
+        "If you feel an earthquake near the coast, move to higher ground immediately.",
+        "Listen to tsunami warnings and evacuation orders from local authorities.",
+        "Move inland and to higher ground as quickly as possible.",
+        "Do not wait for official evacuation orders if you feel the ground shake.",
+        "If you cannot get to higher ground, go to the upper floors of a sturdy building.",
+        "Stay away from beaches and low-lying coastal areas.",
+        "Do not return to coastal areas until authorities declare it safe.",
+        "Be prepared for multiple waves as tsunamis come in a series."
+      ]
+    },
+    "blizzard": {
+      "synonyms": ["snowstorm", "winter storm", "whiteout", "snow squall"],
+      "category": "Natural Disaster",
+      "summary": "Stay indoors and prepare for extended power outages.",
+      "critical": false,
+      "instructions": [
+        "Stay indoors and avoid unnecessary travel during blizzard conditions.",
+        "If you must go outside, dress in layers and cover exposed skin.",
+        "Keep emergency supplies including food, water, and medications for several days.",
+        "Have alternative heating sources ready in case of power outages.",
+        "Keep your phone charged and have a battery-powered radio.",
+        "Check on elderly neighbors and family members.",
+        "If trapped in your car, stay inside and run the engine periodically for heat.",
+        "Clear snow from vents to prevent carbon monoxide poisoning."
+      ]
+    },
+    "drought": {
+      "synonyms": ["water shortage", "dry spell", "aridity", "water crisis"],
+      "category": "Natural Disaster",
+      "summary": "Conserve water and prepare for water restrictions.",
+      "critical": false,
+      "instructions": [
+        "Follow local water conservation guidelines and restrictions.",
+        "Fix any leaks in your home immediately to prevent water waste.",
+        "Use water-efficient appliances and fixtures.",
+        "Collect rainwater for non-potable uses like watering plants.",
+        "Plant drought-resistant vegetation in your garden.",
+        "Have emergency water storage of at least one gallon per person per day.",
+        "Monitor local water quality reports during drought conditions.",
+        "Support community water conservation efforts and programs."
+      ]
+    },
+    "heatwave": {
+      "synonyms": ["extreme heat", "heat emergency", "hot weather", "heat stress"],
+      "category": "Natural Disaster",
+      "summary": "Stay cool and hydrated during extreme heat conditions.",
+      "critical": false,
+      "instructions": [
+        "Stay indoors in air-conditioned spaces as much as possible.",
+        "Drink plenty of water and avoid alcoholic or caffeinated beverages.",
+        "Wear lightweight, light-colored, and loose-fitting clothing.",
+        "Take cool showers or baths to lower your body temperature.",
+        "Never leave children or pets in parked vehicles.",
+        "Check on elderly neighbors and family members regularly.",
+        "Avoid strenuous activities during the hottest parts of the day.",
+        "Know the signs of heat exhaustion and heat stroke."
+      ]
+    },
+    "power outage": {
+      "synonyms": ["blackout", "power failure", "electrical outage", "no electricity"],
+      "category": "Infrastructure Failure",
+      "summary": "Preserve food and use alternative lighting safely.",
+      "critical": false,
+      "instructions": [
+        "Keep refrigerator and freezer doors closed to preserve food.",
+        "Use flashlights or battery-powered lanterns instead of candles.",
+        "Turn off or unplug electrical equipment to prevent damage from power surges.",
+        "Use generators outdoors and away from windows to prevent carbon monoxide poisoning.",
+        "Keep your phone charged and have a battery-powered radio.",
+        "Check on neighbors, especially elderly or vulnerable individuals.",
+        "Report power outages to your utility company.",
+        "Have emergency supplies including food, water, and medications ready."
+      ]
+    },
+    "gas leak": {
+      "synonyms": ["gas emergency", "natural gas leak", "gas smell", "gas odor"],
+      "category": "Infrastructure Failure",
+      "summary": "Evacuate immediately and call emergency services.",
+      "critical": true,
+      "instructions": [
+        "If you smell gas, evacuate the building immediately.",
+        "Do not use any electrical switches, phones, or appliances.",
+        "Do not light matches or create any sparks.",
+        "Call emergency services from outside the building.",
+        "Do not return to the building until authorities declare it safe.",
+        "If you can safely do so, turn off the main gas valve.",
+        "Warn others in the area about the potential gas leak.",
+        "Stay upwind of the building if possible."
+      ]
+    },
+    "evacuation": {
+      "synonyms": ["evacuate", "leave", "relocate", "shelter", "emergency shelter"],
+      "category": "Emergency Response",
+      "summary": "Follow evacuation orders and go to designated safe locations.",
+      "critical": true,
+      "instructions": [
+        "Follow evacuation orders from local authorities immediately.",
+        "Take your emergency kit with important documents and medications.",
+        "Follow designated evacuation routes and avoid shortcuts.",
+        "Inform family and friends of your evacuation plans and destination.",
+        "If you have pets, take them with you or make arrangements for their care.",
+        "Turn off utilities if instructed to do so by authorities.",
+        "Lock your home and secure it before leaving.",
+        "Go to designated emergency shelters or stay with family/friends outside the danger zone."
+      ]
+    }
+  }
+}
